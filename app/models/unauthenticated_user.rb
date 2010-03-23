@@ -28,7 +28,6 @@ class UnauthenticatedUser
   end
 
   def method_missing(method)
-    RAILS_DEFAULT_LOGGER.error "UnauthenticatedUser#PermissionDenied (#{method})"
     raise PermissionDenied
   end
 
